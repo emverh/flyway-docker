@@ -10,7 +10,7 @@ RUN tar -xf flyway-commandline-${FLYWAY_VERSION}-linux-x64.tar.gz -C /opt
 
 WORKDIR /opt/flyway-${FLYWAY_VERSION}
 
-CMD ./flyway migrate -url=$DATABASE_URL -user=$DATABASE_USER -password=$DATABASE_PW -locations=filesystem:/opt/migrations -validateOnMigrate=false -baselineOnMigrate=true
+CMD ./flyway migrate -url=$DATABASE_URL -user=$DATABASE_USER -password=$DATABASE_PW -locations=filesystem:/opt/migrations -validateOnMigrate=false -baselineOnMigrate=true -placeholderReplacement=false
 
 
 
